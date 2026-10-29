@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="IntotheHimalayas">
+  <rect width="64" height="64" rx="14" fill="#2E7D5B" />
+  <path d="M8 46 25.5 19l7.7 12.2L38.7 24 56 46H8Z" fill="#F8FCF8" />
+  <path d="M25.5 19 33.2 31.2l-3.2 5.1-4.1-6.4L19.4 39 8 46 25.5 19Z" fill="#A8D5BA" />
+  <circle cx="44.5" cy="17.5" r="4.5" fill="#F7C873" />
+</svg>

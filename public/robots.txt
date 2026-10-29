@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /reset-password
+
+# Replace with your production sitemap when the domain is live.
+# Sitemap: https://example.com/sitemap.xml

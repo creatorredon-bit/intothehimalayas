@@ -1,0 +1,4 @@
+# SPA fallback for hosts that read _redirects (Netlify, Cloudflare Pages).
+# The Cloudflare Workers deployment (sites/worker.js) implements its own fallback,
+# so scripts/prepare-deploy.mjs removes this file from that bundle.
+/*    /index.html   200

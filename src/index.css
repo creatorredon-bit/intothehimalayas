@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-mint font-sans text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-normal tracking-[-0.015em] text-ink;
+  }
+
+  ::selection {
+    background: #a8d5ba;
+    color: #123527;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-forest ring-offset-2 ring-offset-mint;
+  }
+
+  /* Leaflet needs explicit layering under sticky headers. */
+  .leaflet-pane,
+  .leaflet-top,
+  .leaflet-bottom {
+    z-index: 0 !important;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-forest-600;
+  }
+
+  .btn {
+    @apply inline-flex select-none items-center justify-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-forest text-white hover:bg-forest-700 active:bg-forest-800;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-ink ring-1 ring-inset ring-stone-line hover:bg-forest-50 hover:ring-forest-200;
+  }
+
+  .btn-ghost {
+    @apply btn text-ink-soft hover:bg-forest-50 hover:text-forest-700;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .btn-sm {
+    @apply px-3.5 py-1.5 text-[0.8rem];
+  }
+
+  .btn-lg {
+    @apply px-7 py-3.5 text-base;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-stone-line bg-white px-3.5 py-2.5 text-sm text-ink shadow-sm transition placeholder:text-ink-faint focus:border-forest-300 focus:outline-none focus:ring-2 focus:ring-forest-200/70 disabled:bg-stone-paper;
+  }
+
+  .label {
+    @apply mb-1.5 block text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-ink-muted;
+  }
+
+  .card {
+    @apply rounded-2xl border border-stone-line bg-white shadow-soft;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-forest-50 px-2.5 py-1 text-[0.7rem] font-semibold text-forest-700;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-stone-line bg-white px-3 py-1.5 text-xs font-medium text-ink-soft transition hover:border-forest-300 hover:text-forest-700;
+  }
+
+  .chip-active {
+    @apply border-forest bg-forest text-white hover:border-forest hover:text-white;
+  }
+
+  .link-underline {
+    @apply font-medium text-forest-700 underline decoration-sage decoration-2 underline-offset-4 transition hover:decoration-forest;
+  }
+
+  .prose-page {
+    @apply space-y-5 text-[0.975rem] leading-7 text-ink-soft;
+  }
+
+  .prose-page h2 {
+    @apply mt-10 text-2xl;
+  }
+
+  .prose-page h3 {
+    @apply mt-6 text-lg font-semibold;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-forest-100/80;
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.leaflet-container {
+  font-family: Inter, system-ui, sans-serif;
+  background: #eaf1ea;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+.leaflet-bar a {
+  color: #1f2933 !important;
+}

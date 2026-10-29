@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+coverage
+*.local
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+/freebuff-sites-build/
+/sites/static/
